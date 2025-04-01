@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ingreso de Matrices</title>
+</head>
+<body>
+  <h1>Ingrese los valores de las matrices</h1>
+  <form action="/multiplicar" method="post">
+    <input type="hidden" name="filas_a" value="{{ filas_a }}">
+    <input type="hidden" name="columnas_a" value="{{ columnas_a }}">
+    <input type="hidden" name="filas_b" value="{{ filas_b }}">
+    <input type="hidden" name="columnas_b" value="{{ columnas_b }}">
+
+    <h2>Matriz A</h2>
+    <table>
+      {% for i in range(filas_a) %}
+      <tr>
+        {% for j in range(columnas_a) %}
+        <td>
+          <input type="number" name="a_{{ i }}_{{ j }}" required>
+        </td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </table>
+
+    <h2>Matriz B</h2>
+    <table>
+      {% for i in range(filas_b) %}
+      <tr>
+        {% for j in range(columnas_b) %}
+        <td>
+          <input type="number" name="b_{{ i }}_{{ j }}" required>
+        </td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </table>
+
+    <input type="submit" value="Multiplicar Matrices">
+  </form>
+  <br>
+  <a href="/">Volver a la página principal</a>
+</body>
+</html>

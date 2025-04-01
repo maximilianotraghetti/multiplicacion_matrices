@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Dimensiones de las Matrices</title>
+</head>
+<body>
+  <h1>Ingrese las dimensiones de las matrices</h1>
+  <form action="/crear" method="post">
+    <h2>Matriz A</h2>
+    <label for="filas_a">Filas:</label>
+    <input type="number" id="filas_a" name="filas_a" min="1" required>
+    <label for="columnas_a">Columnas:</label>
+    <input type="number" id="columnas_a" name="columnas_a" min="1" required>
+    
+    <h2>Matriz B</h2>
+    <label for="filas_b">Filas:</label>
+    <input type="number" id="filas_b" name="filas_b" min="1" required>
+    <label for="columnas_b">Columnas:</label>
+    <input type="number" id="columnas_b" name="columnas_b" min="1" required>
+    
+    <br><br>
+    <input type="submit" value="Crear Matrices">
+  </form>
+</body>
+</html>
